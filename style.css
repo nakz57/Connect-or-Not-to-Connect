@@ -1,0 +1,47 @@
+body {
+  background-color: grey;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: center;
+}
+
+.block {
+  display: flex;
+  border: 1px solid white;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  /*font-size: 100px;*/
+}
+
+.red {
+  background-color: red;
+  border-radius: 15px;
+}
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
