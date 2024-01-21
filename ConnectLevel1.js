@@ -1,5 +1,7 @@
-let colorChooser = 'blank'
+let colorChooser = 'red'
 const blockSelected = []
+
+const colorSelected = document.querySelector('.color-selected')
 
 const redBlock = document.querySelectorAll('.red')
 const blueBlock = document.querySelectorAll('.blue')
@@ -7,6 +9,7 @@ const greenBlock = document.querySelectorAll('.green')
 const yellowBlock = document.querySelectorAll('.yellow')
 const orangeBlock = document.querySelectorAll('.orange')
 const tiles = document.querySelectorAll('.block')
+const button = document.querySelector('button')
 
 const redTilesMatch = []
 const blueTilesMatch = []
@@ -58,55 +61,51 @@ const gamePlay = () => {
 }
 for (i = 0; i < redBlock.length; i++) {
   redBlock[i].addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'red'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
-    //winCondition()
   })
 }
 
 blueBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'blue'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
-    //winCondition()
   })
 })
 
 greenBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'green'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
-    //winCondition()
   })
 })
 yellowBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'yellow'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
-    //winCondition()
   })
 })
 orangeBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'orange'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
-    //winCondition()
   })
 })
-// redTiles.forEach((el) => {
-//   if (redTiles[el].classList.obtains('red')) {
-//     redTilesMatch.push(1)
-//   }
-// })
-
-// for (i = 0; i < redTiles.length; i++) {
-//   if (redTiles[i] === true) {
-//     redTilesMatch.push(1)
-//     console.log(redTilesMatch)
-//   }
-// }
+button.addEventListener('click', () => {
+  redBlock[1].classList.remove('red')
+})
