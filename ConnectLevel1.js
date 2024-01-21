@@ -3,11 +3,11 @@ const blockSelected = []
 
 const colorSelected = document.querySelector('.color-selected')
 
-const redBlock = document.querySelectorAll('.red')
-const blueBlock = document.querySelectorAll('.blue')
-const greenBlock = document.querySelectorAll('.green')
-const yellowBlock = document.querySelectorAll('.yellow')
-const orangeBlock = document.querySelectorAll('.orange')
+const redBlock = document.querySelectorAll('.main-red')
+const blueBlock = document.querySelectorAll('.main-blue')
+const greenBlock = document.querySelectorAll('.main-green')
+const yellowBlock = document.querySelectorAll('.main-yellow')
+const orangeBlock = document.querySelectorAll('.main-orange')
 const tiles = document.querySelectorAll('.block')
 const button = document.querySelector('button')
 
@@ -32,19 +32,24 @@ const winCondition = () => {
 const gamePlay = () => {
   for (i = 0; i < tiles.length; i++)
     tiles[i].addEventListener('click', (e) => {
-      if (e.target.classList.contains('red')) return
+      if (
+        e.target.classList.contains('red') ||
+        e.target.classList.contains('main-red')
+      )
+        return
       else if (e.target.classList.contains('blue')) return
       else if (e.target.classList.contains('green')) return
       else if (e.target.classList.contains('yellow')) return
       else if (e.target.classList.contains('orange')) return
 
+      console.log(e.target)
       e.target.classList.add(`${colorChooser}`)
 
       if (e.target.classList.contains('red')) {
         redTilesMatch.push(1)
         console.log(redTilesMatch)
         winCondition()
-      } else if (e.target.classList.contains('blue')) {
+      } else if (e.target.classList.contains('blue') || blueBlock) {
         blueTilesMatch.push(1)
         winCondition()
       } else if (e.target.classList.contains('green')) {
@@ -52,9 +57,11 @@ const gamePlay = () => {
         winCondition()
       } else if (e.target.classList.contains('yellow')) {
         yellowTilesMatch.push(1)
+        console.log(yellowTilesMatch.length)
         winCondition()
       } else if (e.target.classList.contains('orange')) {
         orangeTilesMatch.push(1)
+        console.log(orangeTilesMatch.length)
         winCondition()
       }
     })
@@ -106,6 +113,20 @@ orangeBlock.forEach((el) => {
     gamePlay()
   })
 })
+
+tiles.forEach((el) => {
+  button.addEventListener('click', () => {
+    el.classList.remove('blue')
+    el.classList.remove('red')
+    el.classList.remove('green')
+    el.classList.remove('orange')
+    el.classList.remove('yellow')
+  })
+})
+
 button.addEventListener('click', () => {
-  redBlock[1].classList.remove('red')
+  redTilesMatch = []
+  blueTilesMatch = []
+  greenTilesMatch = []
+  yellowTilesMatch = []
 })

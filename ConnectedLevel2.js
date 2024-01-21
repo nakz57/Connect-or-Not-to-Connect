@@ -7,6 +7,8 @@ const greenBlock = document.querySelectorAll('.green')
 const yellowBlock = document.querySelectorAll('.yellow')
 const orangeBlock = document.querySelectorAll('.orange')
 const magentaBlock = document.querySelectorAll('.magenta')
+const colorSelected = document.querySelector('.color-selected')
+
 const tiles = document.querySelectorAll('.block')
 const button = document.querySelector('button')
 
@@ -68,7 +70,9 @@ const gamePlay = () => {
 }
 for (i = 0; i < redBlock.length; i++) {
   redBlock[i].addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'red'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
   })
@@ -76,7 +80,9 @@ for (i = 0; i < redBlock.length; i++) {
 
 aquaBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'aqua'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
   })
@@ -84,28 +90,36 @@ aquaBlock.forEach((el) => {
 
 greenBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'green'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
   })
 })
 yellowBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'yellow'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
   })
 })
 orangeBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'orange'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
   })
 })
 magentaBlock.forEach((el) => {
   el.addEventListener('click', () => {
+    colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'magenta'
+    colorSelected.classList.add(`${colorChooser}`)
     console.log(colorChooser)
     gamePlay()
   })

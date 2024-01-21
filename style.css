@@ -1,5 +1,8 @@
 body {
   background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-layout {
@@ -7,12 +10,17 @@ body {
   grid-template-columns: 100px 100px 100px 100px 100px;
   grid-template-rows: 100px 100px 100px 100px 100px;
   justify-content: center;
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 500px;
+  max-width: 500px;
 }
 
 .block {
   display: flex;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 30px;
   justify-content: center;
   align-items: center;
   /*font-size: 100px;*/
@@ -20,30 +28,45 @@ body {
 
 .red {
   background-color: red;
-  border-radius: 15px;
+  border-radius: 30px;
 }
 .blue {
   background-color: blue;
+  border-radius: 30px;
 }
 
 .green {
   background-color: green;
+  border-radius: 30px;
 }
 
 .yellow {
   background-color: yellow;
+  border-radius: 30px;
 }
 
 .orange {
   background-color: orange;
+  border-radius: 30px;
 }
 
-#red {
+.main-red {
   background-color: red;
 }
 
-#blue {
+.main-blue {
   background-color: blue;
+}
+
+.main-green {
+  background-color: green;
+}
+
+.main-yellow {
+  background-color: yellow;
+}
+.main-orange {
+  background-color: orange;
 }
 
 button {
@@ -63,4 +86,16 @@ button {
   border: 3px solid white;
   font-size: 20px;
   padding: 10px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+li {
+  font-size: 30px;
+  list-style-type: none;
+}
+.no-line {
+  text-decoration: none;
 }
