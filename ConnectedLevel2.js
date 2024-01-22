@@ -21,8 +21,6 @@ let orangeTilesMatch = []
 let magentaTilesMatch = []
 
 const winCondition = () => {
-  //console.log(magentaTilesMatch.length)
-  // console.log(magentaTilesMatch)
   if (
     redTilesMatch.length === 5 &&
     aquaTilesMatch.length === 11 &&
