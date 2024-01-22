@@ -20,11 +20,11 @@ let orangeTilesMatch = []
 
 const winCondition = () => {
   if (
-    redTilesMatch.length === 1 && //change back to real values 4,3,2,3,3
-    blueTilesMatch.length === 1 &&
-    yellowTilesMatch.length === 1 &&
-    orangeTilesMatch.length === 1 &&
-    greenTilesMatch.length === 1
+    redTilesMatch.length === 4 && //change back to real values 4,3,2,3,3
+    blueTilesMatch.length === 3 &&
+    yellowTilesMatch.length === 2 &&
+    orangeTilesMatch.length === 3 &&
+    greenTilesMatch.length === 3
   ) {
     alert('you have won')
     a[1].setAttribute('href', 'ConnectedLevel2.html')
@@ -152,5 +152,3 @@ button.addEventListener('click', () => {
   yellowTilesMatch = []
   colorSelected.classList.remove(`${colorChooser}`)
 })
-
-//li[1].a.setAttribute('disable', 'true')

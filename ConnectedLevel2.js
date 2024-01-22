@@ -11,6 +11,7 @@ const colorSelected = document.querySelector('.color-selected')
 
 const tiles = document.querySelectorAll('.block')
 const button = document.querySelector('button')
+const a = document.querySelectorAll('a')
 
 let redTilesMatch = []
 let aquaTilesMatch = []
@@ -31,6 +32,7 @@ const winCondition = () => {
     magentaTilesMatch.length === 5
   ) {
     alert('you have won')
+    a[2].setAttribute('href', 'ConnectedLevel3.html')
   }
 }
 
@@ -165,6 +167,8 @@ button.addEventListener('click', () => {
   blueTilesMatch = []
   greenTilesMatch = []
   yellowTilesMatch = []
+  orangeTilesMatch = []
+  magentaTilesMatch = []
   console.log(redTilesMatch.length)
   colorSelected.classList.remove(`${colorChooser}`)
 })

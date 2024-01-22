@@ -1,8 +1,14 @@
 body {
   background-color: grey;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+}
+h1 {
+  font-size: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .game-layout {
@@ -12,18 +18,21 @@ body {
   justify-content: center;
   border: 5px solid black;
   border-radius: 15px;
-  padding: 10px;
+  padding: 5px;
   min-width: 500px;
   max-width: 500px;
 }
-
+.game-pos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .block {
   display: flex;
   border: 1px solid white;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
-  /*font-size: 100px;*/
 }
 
 .red {
@@ -90,7 +99,7 @@ button {
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 li {
   font-size: 30px;
