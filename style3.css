@@ -49,8 +49,6 @@ body {
   background-color: magenta;
 }
 
-/* 059, 131, 189 */
-
 .main-red {
   background-color: red;
 }
@@ -71,18 +69,6 @@ body {
 }
 .main-magenta {
   background-color: magenta;
-}
-
-/* .main-blue {
-  background-color: rgb(059, 131, 255);
-} */
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
 }
 
 .show-color {
