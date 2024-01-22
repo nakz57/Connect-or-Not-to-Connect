@@ -49,6 +49,28 @@ body {
   background-color: magenta;
 }
 
+.main-red {
+  background-color: red;
+}
+
+.main-aqua {
+  background-color: aqua;
+}
+
+.main-green {
+  background-color: green;
+}
+
+.main-yellow {
+  background-color: yellow;
+}
+.main-orange {
+  background-color: orange;
+}
+.main-magenta {
+  background-color: magenta;
+}
+
 #red {
   background-color: red;
 }

@@ -10,22 +10,24 @@ const yellowBlock = document.querySelectorAll('.main-yellow')
 const orangeBlock = document.querySelectorAll('.main-orange')
 const tiles = document.querySelectorAll('.block')
 const button = document.querySelector('button')
+const a = document.querySelectorAll('a')
 
-const redTilesMatch = []
-const blueTilesMatch = []
-const greenTilesMatch = []
-const yellowTilesMatch = []
-const orangeTilesMatch = []
+let redTilesMatch = []
+let blueTilesMatch = []
+let greenTilesMatch = []
+let yellowTilesMatch = []
+let orangeTilesMatch = []
 
 const winCondition = () => {
   if (
-    redTilesMatch.length === 4 &&
-    blueTilesMatch.length === 3 &&
-    yellowTilesMatch.length === 2 &&
-    orangeTilesMatch.length === 3 &&
-    greenTilesMatch.length === 3
+    redTilesMatch.length === 1 && //change back to real values 4,3,2,3,3
+    blueTilesMatch.length === 1 &&
+    yellowTilesMatch.length === 1 &&
+    orangeTilesMatch.length === 1 &&
+    greenTilesMatch.length === 1
   ) {
     alert('you have won')
+    a[1].setAttribute('href', 'ConnectedLevel2.html')
   }
 }
 
@@ -37,10 +39,26 @@ const gamePlay = () => {
         e.target.classList.contains('main-red')
       )
         return
-      else if (e.target.classList.contains('blue')) return
-      else if (e.target.classList.contains('green')) return
-      else if (e.target.classList.contains('yellow')) return
-      else if (e.target.classList.contains('orange')) return
+      else if (
+        e.target.classList.contains('blue') ||
+        e.target.classList.contains('main-blue')
+      )
+        return
+      else if (
+        e.target.classList.contains('green') ||
+        e.target.classList.contains('main-green')
+      )
+        return
+      else if (
+        e.target.classList.contains('yellow') ||
+        e.target.classList.contains('main-yellow')
+      )
+        return
+      else if (
+        e.target.classList.contains('orange') ||
+        e.target.classList.contains('main-orange')
+      )
+        return
 
       console.log(e.target)
       e.target.classList.add(`${colorChooser}`)
@@ -49,11 +67,13 @@ const gamePlay = () => {
         redTilesMatch.push(1)
         console.log(redTilesMatch)
         winCondition()
-      } else if (e.target.classList.contains('blue') || blueBlock) {
+      } else if (e.target.classList.contains('blue')) {
         blueTilesMatch.push(1)
+        console.log(blueTilesMatch.length)
         winCondition()
       } else if (e.target.classList.contains('green')) {
         greenTilesMatch.push(1)
+        console.log(greenTilesMatch.length)
         winCondition()
       } else if (e.target.classList.contains('yellow')) {
         yellowTilesMatch.push(1)
@@ -125,8 +145,12 @@ tiles.forEach((el) => {
 })
 
 button.addEventListener('click', () => {
+  console.log('hello')
   redTilesMatch = []
   blueTilesMatch = []
   greenTilesMatch = []
   yellowTilesMatch = []
+  colorSelected.classList.remove(`${colorChooser}`)
 })
+
+//li[1].a.setAttribute('disable', 'true')

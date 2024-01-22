@@ -1,23 +1,23 @@
 let colorChooser = 'blank'
 const blockSelected = []
 
-const redBlock = document.querySelectorAll('.red')
-const aquaBlock = document.querySelectorAll('.aqua')
-const greenBlock = document.querySelectorAll('.green')
-const yellowBlock = document.querySelectorAll('.yellow')
-const orangeBlock = document.querySelectorAll('.orange')
-const magentaBlock = document.querySelectorAll('.magenta')
+const redBlock = document.querySelectorAll('.main-red')
+const aquaBlock = document.querySelectorAll('.main-aqua')
+const greenBlock = document.querySelectorAll('.main-green')
+const yellowBlock = document.querySelectorAll('.main-yellow')
+const orangeBlock = document.querySelectorAll('.main-orange')
+const magentaBlock = document.querySelectorAll('.main-magenta')
 const colorSelected = document.querySelector('.color-selected')
 
 const tiles = document.querySelectorAll('.block')
 const button = document.querySelector('button')
 
-const redTilesMatch = []
-const aquaTilesMatch = []
-const greenTilesMatch = []
-const yellowTilesMatch = []
-const orangeTilesMatch = []
-const magentaTilesMatch = []
+let redTilesMatch = []
+let aquaTilesMatch = []
+let greenTilesMatch = []
+let yellowTilesMatch = []
+let orangeTilesMatch = []
+let magentaTilesMatch = []
 
 const winCondition = () => {
   //console.log(magentaTilesMatch.length)
@@ -37,12 +37,36 @@ const winCondition = () => {
 const gamePlay = () => {
   for (i = 0; i < tiles.length; i++)
     tiles[i].addEventListener('click', (e) => {
-      if (e.target.classList.contains('red')) return
-      else if (e.target.classList.contains('aqua')) return
-      else if (e.target.classList.contains('green')) return
-      else if (e.target.classList.contains('yellow')) return
-      else if (e.target.classList.contains('orange')) return
-      else if (e.target.classList.contains('magenta')) return
+      if (
+        e.target.classList.contains('red') ||
+        e.target.classList.contains('main-red')
+      )
+        return
+      else if (
+        e.target.classList.contains('aqua') ||
+        e.target.classList.contains('main-aqua')
+      )
+        return
+      else if (
+        e.target.classList.contains('green') ||
+        e.target.classList.contains('main-green')
+      )
+        return
+      else if (
+        e.target.classList.contains('yellow') ||
+        e.target.classList.contains('main-yellow')
+      )
+        return
+      else if (
+        e.target.classList.contains('orange') ||
+        e.target.classList.contains('main-orange')
+      )
+        return
+      else if (
+        e.target.classList.contains('magenta') ||
+        e.target.classList.contains('main-magenta')
+      )
+        return
 
       e.target.classList.add(`${colorChooser}`)
 
@@ -73,7 +97,6 @@ for (i = 0; i < redBlock.length; i++) {
     colorSelected.classList.remove(`${colorChooser}`)
     colorChooser = 'red'
     colorSelected.classList.add(`${colorChooser}`)
-    console.log(colorChooser)
     gamePlay()
   })
 }
@@ -124,6 +147,24 @@ magentaBlock.forEach((el) => {
     gamePlay()
   })
 })
+
+tiles.forEach((el) => {
+  button.addEventListener('click', () => {
+    el.classList.remove('aqua')
+    el.classList.remove('red')
+    el.classList.remove('green')
+    el.classList.remove('orange')
+    el.classList.remove('yellow')
+    el.classList.remove('magenta')
+  })
+})
+
 button.addEventListener('click', () => {
-  location.reload()
+  console.log('hello')
+  redTilesMatch = []
+  blueTilesMatch = []
+  greenTilesMatch = []
+  yellowTilesMatch = []
+  console.log(redTilesMatch.length)
+  colorSelected.classList.remove(`${colorChooser}`)
 })
