@@ -1,8 +1,14 @@
 body {
-  background-color: grey;
+  /* background-color: rgb(185, 20, 20); */
+  background-image: url(./level1background.gif);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
   /* display: flex;
   flex-direction: column;
   align-items: center; */
+  color: white;
+  font-family: 'Cinzel', serif;
 }
 h1 {
   font-size: 50px;
@@ -12,6 +18,7 @@ h1 {
 }
 
 .game-layout {
+  background-color: rgba(174, 57, 39, 0.5);
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px;
   grid-template-rows: 100px 100px 100px 100px 100px;
@@ -29,10 +36,30 @@ h1 {
 }
 .block {
   display: flex;
-  border: 1px solid white;
+  border: 2px solid black;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
+}
+
+.show-color {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 10px;
+  margin-top: 60px;
+}
+.color-selected {
+  background-color: rgb(195, 194, 194);
+  border: 3px solid black;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px 0 15px;
+  border-radius: 30px;
+}
+.color-selected:hover {
+  cursor: pointer;
 }
 
 .red {
@@ -79,32 +106,34 @@ h1 {
 }
 
 button {
-  background-color: rgba(174, 0, 255, 1);
+  /* background-color: rgba(174, 0, 255, 1); */
   display: inline;
   font-size: 30px;
   padding: 10px 30px;
+  font-family: 'Cinzel', 'serif';
+  border-radius: 30px;
+  background-color: rgb(195, 194, 194);
+  border: 3px solid black;
 }
 
-.show-color {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 20px 10px;
-}
-.color-selected {
-  border: 3px solid white;
-  font-size: 20px;
-  padding: 10px;
-}
 ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 li {
-  font-size: 30px;
+  font-size: 40px;
   list-style-type: none;
+}
+
+.no-line:active {
+  color: aqua;
 }
 .no-line {
   text-decoration: none;
+  color: white;
+}
+
+footer {
+  margin-top: 60px;
 }

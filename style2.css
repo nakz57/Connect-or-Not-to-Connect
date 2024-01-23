@@ -1,12 +1,15 @@
 h1 {
   margin: 5px 20px;
-  background-color: aqua;
   display: flex;
   justify-content: center;
 }
 
 body {
   background-color: grey;
+  background-image: url(./background2.gif);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .game-layout {
