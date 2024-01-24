@@ -174,7 +174,6 @@ tiles.forEach((el) => {
 })
 
 button.addEventListener('click', () => {
-  console.log('hello')
   redTilesMatch = []
   aquaTilesMatch = []
   greenTilesMatch = []
