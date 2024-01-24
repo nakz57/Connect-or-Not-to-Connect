@@ -28,7 +28,7 @@ let brownTilesMatch = []
 
 const winCondition = () => {
   if (
-    redTilesMatch.length === 12 && // 1 25 3 12 20 2 4
+    redTilesMatch.length === 12 &&
     aquaTilesMatch.length === 16 &&
     yellowTilesMatch.length === 5 &&
     orangeTilesMatch.length === 11 &&

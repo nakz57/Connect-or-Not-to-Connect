@@ -1,36 +1,49 @@
 h1 {
-  margin: 5px 20px;
+  font-size: 50px;
+  margin: 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  color: rgba(235, 145, 8, 0.842);
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: rgba(1, 0, 0, 0.84);
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(Mantinia\ Regular.otf);
+}
 body {
-  background-image: url(./backgroundS4.gif);
-  background-position: center;
-  background-size: cover;
+  font-family: myFirstFont;
   height: 100vh;
-  font-family: 'Pirata One', 'serif';
 }
 
 .game-layout {
   display: grid;
-  grid-template-columns: 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px;
-  grid-template-rows: 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
   justify-content: center;
 }
 
 .block {
   display: flex;
-  border: 1px solid white;
+  border: 1.25px solid black;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  /*font-size: 100px;*/
 }
 
 .red {
   background-color: red;
-  border-radius: 15px;
 }
 .aqua {
   background-color: aqua;
@@ -93,19 +106,29 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 20px 10px;
+  margin-top: 30px;
 }
 .color-selected {
-  border: 3px solid white;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 35px;
+  padding: 15px 20px;
+  border-radius: 30px;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+  border: 3px solid black;
+  color: rgba(235, 145, 8, 0.842);
 }
 
 button {
-  background-color: red;
-  margin: 20px 0;
-  font-size: 50px;
-  border: 2.5px solid white;
+  display: inline;
+  font-size: 40px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+  border: 3px solid black;
+  color: rgba(235, 145, 8, 0.842);
+  font-family: myFirstFont;
+  background-color: rgba(186, 12, 12, 0.01);
 }
 ul {
   display: flex;
@@ -113,9 +136,20 @@ ul {
   justify-content: space-around;
 }
 li {
-  font-size: 30px;
+  font-size: 40px;
   list-style-type: none;
+}
+
+.no-line:active {
+  color: aqua;
 }
 .no-line {
   text-decoration: none;
+  color: rgba(235, 145, 8, 0.842);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+}
+
+footer {
+  margin-top: 30px;
 }
