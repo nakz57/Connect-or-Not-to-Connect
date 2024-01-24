@@ -37,7 +37,7 @@ const winCondition = () => {
     blueTilesMatch.length === 18 &&
     brownTilesMatch === 12
   ) {
-    alert('you have won')
+    alert('CONGRATULATIONS YOU HAVE COMPLETED ALL LEVELS')
   }
 }
 const gamePlay = () => {
