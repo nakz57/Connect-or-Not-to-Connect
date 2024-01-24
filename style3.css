@@ -6,7 +6,7 @@ h1 {
   justify-content: center;
   color: rgba(255, 255, 255, 0.842);
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813); /* webkit from W3  */
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 @font-face {
   font-family: myFirstFont;
-  src: url(SkyrimBooks_Handwritten_Bold-Regular.ttf);
+  src: url(SkyrimBooks_Handwritten_Bold-Regular.ttf); /*Code was taken from W3, the font file was taken from a GitHub user  */
 }
 
 .game-layout {

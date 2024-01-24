@@ -1,5 +1,4 @@
 let colorChooser = 'red'
-const blockSelected = []
 
 const colorSelected = document.querySelector('.color-selected')
 
