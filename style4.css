@@ -1,12 +1,20 @@
 h1 {
-  margin: 5px 20px;
-  background-color: aqua;
+  font-size: 50px;
+  margin: 0 0 30px 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(42, 0, 121, 0.813);
 }
 
 body {
-  background-color: grey;
+  background-image: url(./background4.gif);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Nova Square', 'serif';
 }
 
 .game-layout {
@@ -82,19 +90,31 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 20px 10px;
+  margin: 60px 10px;
 }
 .color-selected {
-  border: 3px solid white;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 35px;
+  padding: 15px 20px;
+  font-family: 'Nova Square';
+  border-radius: 30px;
+  background-color: rgba(55, 17, 99, 0.297);
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+  border: 3px solid black;
 }
 
 button {
-  background-color: red;
-  margin: 20px 0;
-  font-size: 50px;
-  border: 2.5px solid white;
+  display: inline;
+  font-size: 40px;
+  padding: 10px 30px;
+  font-family: 'Nova Square';
+  border-radius: 30px;
+  background-color: rgba(55, 17, 99, 0.297);
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+  border: 3px solid black;
 }
 ul {
   display: flex;
@@ -102,9 +122,13 @@ ul {
   justify-content: space-around;
 }
 li {
-  font-size: 30px;
+  font-size: 40px;
   list-style-type: none;
+  margin-top: 30px;
 }
 .no-line {
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(42, 0, 121, 0.813);
 }

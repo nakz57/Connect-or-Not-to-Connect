@@ -5,7 +5,11 @@ h1 {
 }
 
 body {
-  background-color: grey;
+  background-image: url(./backgroundS4.gif);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Pirata One', 'serif';
 }
 
 .game-layout {
