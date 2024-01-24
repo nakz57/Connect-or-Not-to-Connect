@@ -1,12 +1,25 @@
 h1 {
-  margin: 5px 20px;
-  background-color: aqua;
+  font-size: 50px;
+  margin: 0 0 30px 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
 }
 
 body {
-  background-color: grey;
+  background-image: url(./background3.gif);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-family: myFirstFont;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(SkyrimBooks_Handwritten_Bold-Regular.ttf);
 }
 
 .game-layout {
@@ -14,6 +27,54 @@ body {
   grid-template-columns: 80px 80px 80px 80px 80px 80px 80px;
   grid-template-rows: 80px 80px 80px 80px 80px 80px 80px;
   justify-content: center;
+  background-color: rgba(17, 68, 99, 0.297);
+  border-radius: 15px;
+  padding: 5px;
+  min-width: 560px;
+  max-width: 560px;
+}
+
+.game-pos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-color {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px 10px;
+  margin-top: 60px;
+}
+
+button {
+  display: inline;
+  font-size: 40px;
+  padding: 10px 30px;
+  font-family: myFirstFont;
+  border-radius: 30px;
+  background-color: rgba(17, 68, 99, 0.297);
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+  border: 3px solid black;
+}
+
+.color-selected {
+  background-color: rgba(17, 68, 99, 0.297);
+  border: 3px solid black;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+  font-weight: bold;
+  padding: 10px 15px 0 15px;
+  border-radius: 30px;
+}
+
+.color-selected:hover {
+  cursor: pointer;
 }
 
 .block {
@@ -71,33 +132,26 @@ body {
   background-color: magenta;
 }
 
-.show-color {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 20px 10px;
-}
-.color-selected {
-  border: 3px solid white;
-  font-size: 20px;
-  padding: 10px;
-}
-
-button {
-  background-color: red;
-  margin: 20px 0;
-  font-size: 50px;
-  border: 2.5px solid white;
-}
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 li {
-  font-size: 30px;
+  font-size: 40px;
   list-style-type: none;
+}
+
+.no-line:active {
+  color: aqua;
 }
 .no-line {
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.842);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.813);
+}
+
+footer {
+  margin-top: 30px;
 }
