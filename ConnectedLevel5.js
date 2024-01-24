@@ -26,13 +26,13 @@ let blueTilesMatch = []
 
 const winCondition = () => {
   if (
-    redTilesMatch.length === 1 && // 1 25 3 12 20 2 4
-    aquaTilesMatch.length === 0 &&
-    yellowTilesMatch.length === 0 &&
-    orangeTilesMatch.length === 0 &&
-    greenTilesMatch.length === 0 &&
-    magentaTilesMatch.length === 0 &&
-    blueTilesMatch.length === 0
+    redTilesMatch.length === 1 &&
+    aquaTilesMatch.length === 25 &&
+    yellowTilesMatch.length === 3 &&
+    orangeTilesMatch.length === 12 &&
+    greenTilesMatch.length === 20 &&
+    magentaTilesMatch.length === 2 &&
+    blueTilesMatch.length === 4
   ) {
     alert('you have won')
     ul.innerHTML = ''
@@ -45,7 +45,6 @@ const winCondition = () => {
       ul.appendChild(newLi)
       a.classList.add('secret')
       a.classList.add('font-effect-fire')
-      console.log(ul, newLi, a)
     }, 3000)
   }
 }
@@ -186,7 +185,6 @@ tiles.forEach((el) => {
 })
 
 button.addEventListener('click', () => {
-  console.log('hello')
   redTilesMatch = []
   aquaTilesMatch = []
   greenTilesMatch = []
