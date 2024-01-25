@@ -38,3 +38,10 @@ Finally this image shows the drastic change in the levels, as the players moves 
 - [x] implement a grid system
 - [x] decided the number of levels
 - [x] research implementing the intersection part
+
+#### **_Credits_**
+
+- Shecodes Website
+- W3
+- Giphy
+- GitHub Users

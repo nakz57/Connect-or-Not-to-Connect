@@ -40,7 +40,7 @@ const winCondition = () => {
       const newLi = document.createElement('li')
       const a = document.createElement('a')
       a.innerHTML = 'Secret Level'
-      a.setAttribute('href', 'SL.HTML')
+      a.setAttribute('href', 'SL.html')
       newLi.appendChild(a)
       ul.appendChild(newLi)
       a.classList.add('secret')
